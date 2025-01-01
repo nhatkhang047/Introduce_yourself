@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"> <img src="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="lab.html">LAB</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <center>
+        <img class="avatar" src="images/avatar.png" width="100" />
+        <h3>Phạm Nhật Khang</h3>
+        <p>Mình là Nhật Khang . Mình thiết kế và xây dựng website.</p>
+
+        <button
+          class="button"
+          onclick="location.href = 'mailto:tunnaduong@gmail.com'"
+        >
+          <i class="fas fa-envelope"></i>&nbsp; Gửi email cho mình</button
+        ><br />
+        <button
+          class="button"
+          onclick="location.href = 'https://web.facebook.com/nhatkhang.pham.372'"
+        >
+          <i class="fab fa-facebook"></i>&nbsp; Facebook</button
+        ><br />
+        <button
+          class="button"
+          onclick="location.href = 'https://instagram.com'"
+        >
+          <i class="fab fa-instagram"></i>&nbsp; Instagram</button
+        ><br />
+        <button class="button" onclick="location.href = 'https://twitter.com'">
+          <i class="fab fa-twitter"></i>&nbsp; Twitter</button
+        ><br />
+
+        <button
+          class="button"
+          onclick="location.href = 'https://github.com/nhatkhang047'"
+        >
+          <i class="fab fa-github"></i>&nbsp; GitHub
+        </button>
+      </center>
+    </section>
+
+    <!-- dong mo menu -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

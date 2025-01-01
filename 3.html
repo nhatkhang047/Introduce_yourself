@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Materials</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f5;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        background-color: #4a90e2;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .container {
+        text-align: center;
+        padding: 30px;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .course-card {
+        display: inline-block;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 200px;
+      }
+      .course-card h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+      .button {
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .button:hover {
+        background-color: #357abd;
+      }
+      .materials {
+        display: none;
+        margin-top: 20px;
+        text-align: left;
+      }
+      .materials h4 {
+        margin-bottom: 10px;
+      }
+      .materials ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .materials li {
+        margin-bottom: 5px;
+        cursor: pointer;
+        color: #4a90e2;
+      }
+      .lecture-content {
+        display: none;
+        margin-top: 10px;
+        background-color: #e0e0e0;
+        padding: 15px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>Nơi sinh viên có thể tìm thấy tài liệu học tập của mình</h2>
+    </div>
+
+    <div class="container">
+      <div class="title">Môn Học</div>
+
+      <!-- Python Course -->
+      <div class="course-card">
+        <h3>Python Cơ Bản</h3>
+        <button class="button" onclick="showMaterials('python')">
+          Xem Tài Liệu
+        </button>
+        <div id="python" class="materials">
+          <h4>Tài Liệu Python Cơ Bản</h4>
+          <ul>
+            <li onclick="showLectureContent('python-lecture1')">
+              Bài giảng 1: Giới thiệu về Python
+            </li>
+            <li onclick="showLectureContent('python-lecture2')">
+              Bài giảng 2: Biến và kiểu dữ liệu
+            </li>
+            <li>Bài tập 1: Luyện tập với biến</li>
+            <li>Tài liệu tham khảo: Python for Beginners</li>
+          </ul>
+          <div id="python-lecture1" class="lecture-content">
+            <h5>Nội dung Bài giảng 1: Giới thiệu về Python</h5>
+            <p>
+              1. Thông tin chung về môn học<br />
+              2. Giới thiệu ngôn ngữ Python<br />
+              3. Cách thực hiện câu lệnh, chương trình<br />
+              4. Biến, khai báo chuỗi, khối lệnh<br />
+              5. Nhập dữ liệu và xuất dữ liệu<br />
+              6. Kiểu dữ liệu và phép toán liên quan<br />
+              7. Vài ví dụ minh họa<br />
+              8. Bài tập
+            </p>
+          </div>
+          <div id="python-lecture2" class="lecture-content">
+            <h5>Nội dung Bài giảng 2: Biến và kiểu dữ liệu</h5>
+            <p>
+              1. Giới thiệu về biến<br />
+              2. Các loại kiểu dữ liệu trong Python<br />
+              3. Cách sử dụng biến và kiểu dữ liệu<br />
+              4. Ví dụ về thao tác với các kiểu dữ liệu khác nhau<br />
+              5. Bài tập thực hành
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toán Cao Cấp Course -->
+      <div class="course-card">
+        <h3>Toán Cao Cấp</h3>
+        <button class="button" onclick="showMaterials('math')">
+          Xem Tài Liệu
+        </button>
+        <div id="math" class="materials">
+          <h4>Tài Liệu Toán Cao Cấp</h4>
+          <ul>
+            <li onclick="showLectureContent('math-lecture1')">
+              Bài giảng 1: Giới thiệu về ma trận
+            </li>
+            <li onclick="showLectureContent('math-lecture2')">
+              Bài giảng 2: Giải hệ phương trình tuyến tính
+            </li>
+            <li>Bài tập 1: Tính toán ma trận cơ bản</li>
+            <li>Tài liệu tham khảo: Advanced Mathematics Guide</li>
+          </ul>
+          <div id="math-lecture1" class="lecture-content">
+            <h5>Nội dung Bài giảng 1: Giới thiệu về ma trận</h5>
+            <p>
+              1. Khái niệm ma trận<br />
+              2. Các phép toán trên ma trận<br />
+              3. Ma trận đơn vị, ma trận nghịch đảo<br />
+              4. Ứng dụng của ma trận trong giải bài toán thực tế<br />
+              5. Ví dụ minh họa
+            </p>
+          </div>
+          <div id="math-lecture2" class="lecture-content">
+            <h5>Nội dung Bài giảng 2: Giải hệ phương trình tuyến tính</h5>
+            <p>
+              1. Phương pháp Gauss<br />
+              2. Phương pháp Gauss-Jordan<br />
+              3. Hệ phương trình đồng nhất và không đồng nhất<br />
+              4. Ví dụ minh họa và bài tập
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vật Lý Course -->
+      <div class="course-card">
+        <h3>Vật Lý</h3>
+        <button class="button" onclick="showMaterials('physics')">
+          Xem Tài Liệu
+        </button>
+        <div id="physics" class="materials">
+          <h4>Tài Liệu Vật Lý</h4>
+          <ul>
+            <li onclick="showLectureContent('physics-lecture1')">
+              Bài giảng 1: Cơ học cơ bản
+            </li>
+            <li onclick="showLectureContent('physics-lecture2')">
+              Bài giảng 2: Điện từ học
+            </li>
+            <li>Bài tập 1: Bài tập về lực và chuyển động</li>
+            <li>Tài liệu tham khảo: Physics Fundamentals</li>
+          </ul>
+          <div id="physics-lecture1" class="lecture-content">
+            <h5>Nội dung Bài giảng 1: Cơ học cơ bản</h5>
+            <p>
+              1. Khái niệm về chuyển động<br />
+              2. Các định luật Newton<br />
+              3. Bảo toàn động lượng<br />
+              4. Bài tập và ví dụ thực tế
+            </p>
+          </div>
+          <div id="physics-lecture2" class="lecture-content">
+            <h5>Nội dung Bài giảng 2: Điện từ học</h5>
+            <p>
+              1. Khái niệm về điện và từ trường<br />
+              2. Định luật Faraday và Lenz<br />
+              3. Ứng dụng của điện từ trong đời sống<br />
+              4. Bài tập và ví dụ
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showMaterials(courseId) {
+        // Hide all materials
+        const materials = document.querySelectorAll(".materials");
+        materials.forEach((material) => {
+          material.style.display = "none";
+        });
+
+        // Show the selected course materials
+        const selectedMaterials = document.getElementById(courseId);
+        if (selectedMaterials) {
+          selectedMaterials.style.display = "block";
+        }
+      }
+
+      function showLectureContent(lectureId) {
+        // Hide all lecture contents
+        const lectureContents = document.querySelectorAll(".lecture-content");
+        lectureContents.forEach((content) => {
+          content.style.display = "none";
+        });
+
+        // Show the selected lecture content
+        const selectedContent = document.getElementById(lectureId);
+        if (selectedContent) {
+          selectedContent.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Overview</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    /* General reset to remove margins and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    /* Container for the two columns */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Left section styles (video and course details) */
+    .left-section {
+      flex: 2;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    .left-section .video-player {
+      margin-bottom: 30px;
+    }
+
+    .left-section h2 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .left-section p {
+      color: #7f8c8d;
+      margin-top: 10px;
+    }
+
+    /* Right section styles (course content) */
+    .right-section {
+      flex: 1;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .right-section h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .right-section ul {
+      list-style-type: none;
+    }
+
+    .right-section ul li {
+      background-color: #ecf0f1;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      color: #34495e;
+    }
+
+    .right-section ul li:hover {
+      background-color: #bdc3c7;
+    }
+
+    /* Responsive design: Make the layout vertical on small screens */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-section,
+      .right-section {
+        flex: unset;
+        border-right: none;
+      }
+
+      .right-section ul li {
+        font-size: 14px;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!-- Left Section for video and course details -->
+      <div class="left-section">
+        <div class="video-player">
+          <h2>Integration and Integration History</h2>
+          <video width="100%" controls>
+            <source src="your-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Integration: The process of making data transfer between multiple
+            systems is known as integration...
+          </p>
+
+          <!-- New content starts here -->
+          <header>
+            <h1>MuleSoft 4.X Complete Guide for Beginners</h1>
+          </header>
+          <div class="content">
+            <h2>About the Course</h2>
+            <p>
+              Upgraded with the latest MuleSoft ESB versions, Anypoint Platform,
+              DataWeave, MUnit, DevOps, MCD Tests, and Realtime Project.
+            </p>
+            <p class="rating">
+              ★ 4.6 (4,705 ratings) | 26,379 students | 50.5 hours | Last
+              updated: November 2023
+            </p>
+
+            <h2>What You'll Learn</h2>
+            <ul>
+              <li>
+                You will become expert in Mule ESB, Anypoint platform
+                operations...
+              </li>
+              <li>Step-by-step coding in detail explanation.</li>
+              <li>Setup MuleSoft by yourself for your organization.</li>
+            </ul>
+          </div>
+          <!-- New content ends here -->
+        </div>
+      </div>
+
+      <!-- Right Section for course content and structure -->
+      <div class="right-section">
+        <h2>Course Content</h2>
+        <ul>
+          <li>2. Integration introduction - 8min</li>
+          <li>3. Mule API development life cycle - 4min</li>
+          <li>4. Course resources & documents - 1min</li>
+          <li>Section 2: Mule 4 installation set-up</li>
+          <li>Section 3: Mule basics</li>
+          <li>Section 4: Mule events and message structure</li>
+          <!-- Add more sections as necessary -->
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

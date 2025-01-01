@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learning Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+      }
+
+      /* Navbar Styles */
+      .navbar {
+        background-color: #4a90e2;
+        padding: 12px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .navbar .nav-links {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar .nav-links li {
+        display: inline;
+      }
+
+      .navbar .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 8px 15px;
+        transition: background-color 0.3s;
+        white-space: nowrap;
+      }
+
+      .navbar .nav-links a:hover {
+        background-color: #357abd;
+        border-radius: 5px;
+      }
+
+      /* Welcome Section */
+      .welcome {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+      }
+
+      .welcome img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      .progress-overview {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px;
+        border: 1px solid #ddd;
+      }
+
+      .progress-overview div {
+        text-align: center;
+      }
+
+      .streak p {
+        text-align: left;
+      }
+
+      .current-streak {
+        color: #5b68f6;
+      }
+
+      .activity-summary {
+        display: flex;
+        align-items: center;
+      }
+
+      .activity-summary div {
+        margin-right: 10px;
+      }
+
+      /* Learning Section */
+      .learning-section {
+        padding: 20px;
+      }
+
+      .tabs {
+        display: flex;
+        gap: 10px;
+      }
+
+      .tab {
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .tab.active {
+        background-color: #4a90e2;
+        color: white;
+      }
+
+      .video-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      iframe {
+        border-radius: 5px;
+      }
+
+      /* Course List */
+      .course-list {
+        display: flex;
+        justify-content: space-between;
+        overflow-x: auto;
+        padding: 20px;
+      }
+
+      .course-card {
+        background-color: #fff;
+        padding: 15px;
+        width: 23%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .course-card img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .course-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .course-author {
+        font-size: 14px;
+        color: #888;
+        margin: 5px 0;
+      }
+
+      .course-rating {
+        font-size: 14px;
+        color: #f39c12;
+        margin-top: 5px;
+      }
+
+      /* Personalize Section */
+      .personalize-section {
+        background-color: #fff;
+        padding: 30px;
+        margin: 30px 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .personalize-section h3 {
+        margin-bottom: 20px;
+      }
+
+      .personalize-button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul class="nav-links">
+        <li><a href="#">Business Operations</a></li>
+        <li><a href="#">Cloud Computing</a></li>
+        <li><a href="#">Cybersecurity</a></li>
+        <li><a href="#">Data Science</a></li>
+        <li><a href="#">Development</a></li>
+        <li><a href="#">IT Operations</a></li>
+        <li><a href="#">Language Learning</a></li>
+        <li><a href="#">Leadership & Management</a></li>
+        <li><a href="#">Marketing</a></li>
+      </ul>
+    </div>
+
+    <!-- User Welcome Section -->
+    <div class="welcome">
+      <img src="images/profile.jpg" alt="Profile Picture" />
+      <div>
+        <h2>Welcome back, Pham Nhat Khang</h2>
+        <a href="#"><strong>Add occupation and interests</strong></a>
+      </div>
+    </div>
+
+    <!-- Progress Overview Section -->
+    <div class="progress-overview">
+      <div class="streak">
+        <p><strong>Weekly streak</strong></p>
+        <p><strong>One ring down, one to go. Keep it up!</strong></p>
+      </div>
+
+      <div class="current-streak">
+        <p>🔥 2 weeks</p>
+        <p>Current streak</p>
+      </div>
+      <div class="activity-summary">
+        <div>
+          <div>11/30 course min</div>
+          <div>4/1 visit</div>
+          <div>Oct 13 - 19</div>
+        </div>
+        <a href="#">See all activity</a>
+      </div>
+    </div>
+
+    <!-- Learning Section -->
+    <div class="learning-section">
+      <h2>Pick up where you left off</h2>
+      <div class="tabs">
+        <button class="tab active">Courses</button>
+        <button class="tab">Learning paths</button>
+        <button class="tab">Certification preparation</button>
+      </div>
+
+      <!-- YouTube Video Embeds -->
+      <div class="video-container">
+        <iframe
+          width="400"
+          height="150"
+          src="https://www.youtube.com/embed/QgjkjsqAzvo"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="400"
+          height="150"
+          src="https://www.youtube.com/embed/k4715CJ0Ii8"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="400"
+          height="150"
+          src="https://www.youtube.com/embed/6ecNJIuPWf0"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="recommendation-header">
+      <h2>Based on your certification interests, we recommend</h2>
+      <a href="#">Edit certification interests</a>
+    </div>
+    <div class="course-list">
+      <div class="course-card">
+        <img src="images/a1.jpg" alt="Course Image" />
+        <div class="course-title">
+          Oracle Certified Associate Java Programmer (OCAJP) 1Z0-808
+        </div>
+        <div class="course-author">Andrii Piatakha, Learn IT University</div>
+        <div class="course-rating">4.6 ★ (438)</div>
+      </div>
+      <div class="course-card">
+        <img src="images/a2.jpg" alt="Course Image" />
+        <div class="course-title">
+          Oracle Java Certification - Pass the Associate 1Z0-808 Exam
+        </div>
+        <div class="course-author">
+          Tim Buchalka's Learn Programming Academy, Goran Lochert
+        </div>
+        <div class="course-rating">4.6 ★ (6,906)</div>
+      </div>
+      <div class="course-card">
+        <img src="images/a3.jpg" alt="Course Image" />
+        <div class="course-title">
+          Complete Java SE 8 Developer Bootcamp - OCA Prep Included
+        </div>
+        <div class="course-author">Intertech Training, Jeff Jensen</div>
+        <div class="course-rating">4.6 ★ (9,726)</div>
+      </div>
+      <div class="course-card">
+        <img src="images/a4.jpg" alt="Course Image" />
+        <div class="course-title">
+          Spring Professional Certification Exam Tutorial - Module 02
+        </div>
+        <div class="course-author">Dominik Cebula</div>
+        <div class="course-rating">4.6 ★ (1,121)</div>
+      </div>
+    </div>
+
+    <div class="personalize-section">
+      <h3>Personalize your learning experience</h3>
+      <p>
+        Add your occupation and interests to get better content recommendations.
+      </p>
+      <button class="personalize-button">Add occupation and interests</button>
+    </div>
+  </body>
+</html>
