@@ -19,11 +19,13 @@
 h3 {
   font-family: "Lobster", cursive;
   margin: 10px 0 8px 0;
+  color: white;
 }
 
 p {
   font-family: system-ui;
   width: 450px;
+  color: white;
 }
 
 @media only screen and (max-width: 600px) {
